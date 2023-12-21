@@ -1,0 +1,19 @@
+.header
+    position: relative
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url(../img/footerimg.jpg) center/cover no-repeat 
+    height: 95vh
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 80%) /* обрезаем часть изображения */
+    text-align: center
+    &__logo
+        position: absolute 
+        display: inline-block
+        width: 5.6rem
+        height: 7rem
+        top: 5rem
+        left: 5rem
+    &__box
+        width: 100%
+        position: absolute
+        left: 50% /* центрируем по горизонтали */
+        top: 40% /* смещаем по вертикали */
+        transform: translate(-50%, -50%) /* смещаем точку центрирования блока */
