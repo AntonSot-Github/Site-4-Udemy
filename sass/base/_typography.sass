@@ -2,7 +2,7 @@ body
     font-family: 'Roboto'
     font-weight: 400
     color: $color-gray
-    font-size: 1.6rem
+    font-size: $font-size-paragraph
     letter-spacing: .2rem
     
 .title-first
@@ -30,3 +30,29 @@ body
         animation-name: anim-title2 
         animation-duration: 5s
         animation-iteration-count: infinite
+
+.title-secondary
+    font-size: $font-size-paragraph-h2
+    font-weight: 800
+    letter-spacing: 1rem
+    text-transform: uppercase
+    background: linear-gradient(90deg, rgba(#BA8554, 0.7) 0.03%, rgba(#A14F03, 0.70) 99.94%),  center/cover no-repeat
+    background-clip: text
+    color: transparent
+    transition: all .4s /* Задаем плавность перехода */
+    backface-visibility: hidden /* устраняем дергание тени */
+    &:hover
+        transform: skewX(15deg) skewY(2deg) scale(1.2)
+        text-shadow: $shadow-h2
+
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    font-weight: 700
+    text-transform: uppercase
+
+.paragraph
+    font-size: $font-size-paragraph
+    font-weight: 400
+    letter-spacing: .2rem
+    line-height: 140%

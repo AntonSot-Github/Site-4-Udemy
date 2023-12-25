@@ -1,0 +1,33 @@
+.row
+    max-width: 1440px
+    margin: 0 auto
+    color: black
+    @include clearfix
+
+    //устанавливаем отступ для всех строк, кроме последней
+    &:not(:last-child) 
+        margin-bottom: $indent-8rem
+
+.col1-50
+    width: calc((100% - #{$column-indent}) / 2)
+
+
+.col-33
+    width: calc((100% - 2 * #{$column-indent}) / 3)
+
+.col-66
+    width: calc(( 2 * (100% - 2 * #{$column-indent})) / 3)
+
+.col-25
+    width: calc((100% - 3 * #{$column-indent}) / 4)
+    
+.col-50
+    width: calc( 2 * ((100% - 3 * #{$column-indent}) / 4) + #{$column-indent})
+
+.col-75
+    width: calc( 3 * ((100% - 3 * #{$column-indent}) / 4) + 2 * #{$column-indent})
+
+[class^="col"]
+    &:not(:last-child)
+        margin-right: $column-indent
+    float: left

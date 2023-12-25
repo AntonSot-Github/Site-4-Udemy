@@ -3,3 +3,9 @@
     text-decoration: none
     text-transform: $text-transform
     color: $color-gray
+
+@mixin clearfix
+    &::after        
+        content: ""
+        display: table
+        clear: both
