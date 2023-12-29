@@ -149,7 +149,7 @@ body {
   margin-bottom: 8rem;
 }
 
-/* подключаем компонент - кнопку */
+/* подключаем компоненты - кнопку */
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -198,7 +198,7 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
-  color: #777777;
+  color: #BA8554;
   text-decoration: none;
   padding: 1rem;
   border-bottom: 0.2rem #A14F03 solid;
@@ -211,6 +211,41 @@ body {
 }
 .btn-text:active {
   transform: translateY(0rem);
+}
+
+[class^=composition__photo] {
+  width: 46%;
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.4);
+  border-radius: 0.6rem;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.4s;
+  outline-offset: 0.2rem;
+}
+.composition__photo_n1 {
+  top: 0;
+}
+.composition__photo_n2 {
+  right: 10rem;
+  top: 9rem;
+}
+.composition__photo_n3 {
+  top: 14.4rem;
+  left: 2.2rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1);
+  z-index: 20;
+  outline: 0.5rem solid #BA8554;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
 }
 
 .header {

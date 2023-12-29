@@ -1,0 +1,31 @@
+
+
+[class^="composition__photo"]
+    width: 46%
+    box-shadow: $box-shadow
+    border-radius: .6rem
+
+
+.composition
+    position: relative 
+    &__photo
+        position: absolute
+        z-index: 1
+        transition: all .4s
+        outline-offset: .2rem
+        &_n1
+            top: 0
+        &_n2
+            right: 10rem
+            top: 9rem
+        &_n3
+            top: 14.4rem
+            left: 2.2rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 20
+            outline: .5rem solid $brown-light
+    &:hover &__photo:not(:hover) /* прописано для composition, уменьшает 2 других img, когда курсор на одном */
+        transform: scale(.95)
+        
+
