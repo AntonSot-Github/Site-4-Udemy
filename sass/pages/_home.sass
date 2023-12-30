@@ -1,2 +1,10 @@
 .description-part
     padding-top: 8rem
+    padding-bottom: 20rem
+
+.section-adventure
+    padding: 21rem 0
+    background: linear-gradient(90deg, rgba($brown-light, 0.7) 0.03%, rgba($black, 0.70) 99.94%), url(../img/section_adventure.jpg) center/cover no-repeat
+    transform: skewY(7deg) /* наклон контейнера и всех потомков */
+    & > * 
+        transform: skewY(-7deg) /* отмена наклона для потомков */
