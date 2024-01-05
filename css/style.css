@@ -122,6 +122,9 @@ body {
   transform: skewX(15deg) skewY(2deg) scale(1.2);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
+.title-secondary_white {
+  color: #FAFAFA;
+}
 
 .title-third {
   font-size: 2rem;
@@ -376,6 +379,35 @@ body {
   font-family: "Lato-Bolt";
 }
 
+.feedback-card {
+  width: 75%;
+  background: rgba(250, 250, 250, 0.75);
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skew(330deg);
+}
+.feedback-card > * {
+  transform: skew(-330deg);
+}
+.feedback-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: yellow;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+}
+.feedback-card p {
+  display: block;
+}
+.feedback-card img {
+  height: 100%;
+}
+
 .header {
   position: relative;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/footerimg.jpg) center/cover no-repeat;
@@ -416,6 +448,10 @@ body {
 
 .section-tours {
   padding-top: 21rem;
+}
+
+.section-feedback {
+  padding-top: 8rem;
 }
 
 .row {

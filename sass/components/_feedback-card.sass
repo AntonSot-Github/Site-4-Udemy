@@ -1,0 +1,23 @@
+.feedback-card
+    width: 75%
+    background: rgba($white, .75)
+    box-shadow: $box-shadow
+    margin: 0 auto
+    padding: 6rem
+    transform: skew(330deg)
+    & > *  /* обращение только к дочерним элементам */
+        transform: skew(-330deg) /* обратная трансформация для выравнивания */
+    &__img
+        width: 15rem
+        height: 15rem
+        background: yellow
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%) /* обтекание текста по радиусу */
+        -webkit-shape-outside: circle(50% at 50% 50%) /* кроссбраузерность */ 
+        margin-right: 4rem
+        overflow: hidden
+    p
+        display: block
+    img
+        height: 100%
