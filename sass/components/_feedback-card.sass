@@ -6,8 +6,12 @@
     margin: 0 auto
     padding: 6rem
     transform: skew(330deg)
+    z-index: 2
     & > *  /* обращение только к дочерним элементам */
         transform: skew(-330deg) /* обратная трансформация для выравнивания */
+    &__title
+        position: relative
+        z-index: 2
     &__img
         width: 15rem
         height: 15rem
@@ -43,6 +47,12 @@
     &:hover img
         transform: scale(1)
         filter: blur( .3rem) brightness(70%)
+    &__btn
+        position: relative
+        z-index: 2
+
+
+
 
         
         
