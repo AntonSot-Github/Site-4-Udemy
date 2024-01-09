@@ -268,6 +268,7 @@
                                         Забронировать тур
                                     </h2>
                                 </div> 
+
                                 <div class="form__group">
                                     <input type="text" class="form__input" placeholder="Имя Фамилия" id="name" required>
                                     <label for="name" class="form__label">Ваше имя и Фамилия</label>
@@ -276,6 +277,19 @@
                                     <input type="email" class="form__input" placeholder="email" id="email" required>
                                     <label for="email" class="form__label">Ваш email</label>
                                 </div>
+
+                                <div class="form__group-radio">
+                                    <input type="radio" class="form__input-radio" id="choise-1" name="checked"> <!-- одинаковое имя для обоих импутов мы задаём, чтобы выбирался только один вариант -->
+                                    <label for="choise-1" class="form__label-radio"><span class="form__button-radio"></span> Групповой тур</label>
+                                </div>
+                                <div class="form__group-radio">
+                                    <input type="radio" class="form__input-radio" id="choise-2" name="checked">
+                                    <label for="choise-2" class="form__label-radio"><span class="form__button-radio"></span> Индивидуальный тур</label>
+                                </div>
+                                <div class="form__group">
+                                    <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
+                                </div>
+
                             </form>
                         </div>
                     </div>

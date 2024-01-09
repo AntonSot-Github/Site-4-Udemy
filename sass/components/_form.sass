@@ -7,3 +7,74 @@
     box-shadow: $box-shadow
     border-radius: .5rem
     overflow: hidden
+
+.form
+    width: 60%
+    padding-top: 5rem
+    padding-left: 5rem
+    &__group:not(:last-child)
+        margin-bottom: 2.5rem
+
+    &__input
+        font-size: 1.6rem
+        font-weight: 400
+        letter-spacing: .2rem
+        color: $color-gray
+        padding: 1rem 0rem 1rem 2rem
+        background: $white
+        border: none
+        border-radius: .5rem
+        width: 70%
+        &:focus
+            outline: none
+            border-bottom: .3rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .3rem solid #D76363
+    &__label
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .2s all
+    &__input:placeholder-shown + &__label /* Плюс это обращение к соседнему эл-ту */
+        opacity: 0 /* делаем эл-т прозрачным до начала ввода текста */
+        visibility: hidden
+        transform: translateY(-3rem)
+    &__group-radio
+        width: 40%
+        display: inline-block
+        margin-bottom: 6rem
+    &__input-radio
+        display: none /* убираем стандартный кружок кнопки */
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 4rem
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        border: .5rem solid $brown
+        display: block
+        position: absolute
+        left: 0
+        top: -0.4rem
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: $brown
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0 /* делаем псевдоэлемент непрозрачным при выборе */
+            transition: .2s all
+    &__input-radio:checked ~ &__label-radio &__button-radio::after /* обращаемся к псевдоэлементу через псевдокласс */
+        opacity: 1 /* псевдоэлемент полностью прозрачный, когда нажата другая кнопка */
+
