@@ -531,7 +531,7 @@ body {
   transform: translateY(-3rem);
 }
 .form__group-radio {
-  width: 40%;
+  width: 38%;
   display: inline-block;
   margin-bottom: 6rem;
 }
@@ -671,4 +671,100 @@ body {
 }
 [class^=col]:not(:last-child) {
   margin-right: 6rem;
+}
+
+.footer {
+  background: #333;
+  width: 100%;
+  padding: 8rem;
+}
+.footer__img {
+  width: 10.5%;
+  margin: 0 auto;
+  display: block;
+}
+.footer__nav-menu {
+  text-align: center;
+}
+.footer__nav-menu a {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.footer__nav-menu a:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__nav-menu a:hover {
+  transform: scale(1.2) translateY(-0.3rem);
+  color: #A14F03;
+}
+
+.navigation__toggle {
+  display: none;
+}
+.navigation__button {
+  background: #FAFAFA;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  top: 6rem;
+  right: 6rem;
+  position: fixed;
+  z-index: 8;
+}
+.navigation__background {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: radial-gradient(#BA8554, #A14F03);
+  position: fixed;
+  top: 8rem;
+  right: 8rem;
+  z-index: 5;
+  transform: scale(80);
+}
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  right: 0;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+.navigation__item {
+  text-align: center;
+}
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.navigation__link {
+  color: #FAFAFA;
+}
+.navigation__link:link, .navigation__link:active {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  background: linear-gradient(120deg, transparent 0, transparent 50%, #FAFAFA 50%);
+  background-size: 220%;
+  transition: all 0.4s;
+  display: inline-block;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #A14F03;
+  transform: translateX(1rem);
 }/*# sourceMappingURL=style.css.map */

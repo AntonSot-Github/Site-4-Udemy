@@ -1,0 +1,56 @@
+.navigation
+    &__toggle
+        display: none /* удаляем квадрат для галочки */
+    &__button
+        background: $white
+        height: 9rem
+        width: 9rem
+        border-radius: 50%
+        top: 6rem
+        right: 6rem
+        position: fixed
+        z-index: 8
+    &__background
+        width: 7rem
+        height: 7rem
+        border-radius: 50%
+        background: radial-gradient($brown-light, $brown)
+        position: fixed
+        top: 8rem
+        right: 8rem
+        z-index: 5
+        transform: scale(80)
+    &__nav
+        height: 100vh /* всегда 100% высоты экрана */
+        width: 100%
+        position: fixed
+        z-index: 6
+        top: 0
+        right: 0
+    &__list
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        list-style: none /* убираем точки из начала списка */
+    &__item
+        text-align: center
+        &:not( :last-child )
+            margin-bottom: 5rem
+    &__link
+        color: $white
+        &:link, &:active
+            font-size: 4rem
+            font-weight: 300
+            letter-spacing: .5rem
+            text-decoration: none
+            text-transform: uppercase
+            color: $white
+            background: linear-gradient(120deg, transparent 0, transparent 50%, $white 50%)
+            background-size: 220%
+            transition: all .4s
+            display: inline-block /* для работы transform */
+        &:hover, &:active
+            background-position: 100% /* белый цвет полностью закрывает фон */
+            color: $brown
+            transform: translateX(1rem)
