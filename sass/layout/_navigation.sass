@@ -3,30 +3,40 @@
         display: none /* удаляем квадрат для галочки */
     &__button
         background: $white
-        height: 9rem
-        width: 9rem
+        mix-blend-mode: difference /* изменение цвета фона в зависимости от цвета других слоев */
+        height: 8rem
+        width: 8rem
         border-radius: 50%
-        top: 6rem
-        right: 6rem
-        position: fixed
-        z-index: 8
-    &__background
-        width: 7rem
-        height: 7rem
-        border-radius: 50%
-        background: radial-gradient($brown-light, $brown)
-        position: fixed
         top: 8rem
         right: 8rem
+        position: fixed
+        z-index: 8        
+        display: inline-block
+        cursor: pointer
+    &__background
+        width: 6rem
+        height: 6rem
+        border-radius: 50%
+        background: radial-gradient($brown-light, $brown)
+        visibility: hidden
+        position: fixed
+        top: 7.5rem
+        right: 7.5rem
         z-index: 5
-        transform: scale(80)
+        /* transform: scale(80) */
+        transition: all .7s
+        
+            
     &__nav
         height: 100vh /* всегда 100% высоты экрана */
-        width: 100%
+        /* width: 100% */
         position: fixed
         z-index: 6
         top: 0
         right: 0
+        opacity: 0
+        width: 0
+        transition: all .7s
     &__list
         position: absolute
         top: 50%
@@ -54,3 +64,61 @@
             background-position: 100% /* белый цвет полностью закрывает фон */
             color: $brown
             transform: translateX(1rem)
+    &__toggle:checked ~ &__background
+        visibility: visible
+        transform: scale(80)
+        
+    &__toggle:checked ~ &__button
+        background: white
+        mix-blend-mode: normal
+    &__toggle:checked ~ &__nav
+        width: 100%
+        opacity: 1
+        
+    &__icon
+        position: relative
+        top: 34%
+        left: 50%
+        transform: translate(-50%, -34%)
+        z-index: 10
+        
+        &,
+        &::before,
+        &::after
+            content: ""
+            height: 2px
+            width: 30px
+            background: black
+            display: inline-block
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            transition: all .5s
+            mix-blend-mode: normal
+        &::before
+            top: 10px
+        &::after
+            top: -10px
+            
+
+    &__toggle:checked ~ &__button &__icon 
+        visibility: hidden 
+        mix-blend-mode: normal
+
+    &__toggle:checked ~ &__button &__icon::before 
+        visibility: visible
+        transform: rotate(45deg) /* поворачиваем верхнюю линию */
+        top: 0
+        mix-blend-mode: normal
+
+    &__toggle:checked ~ &__button &__icon::after
+        visibility: visible
+        transform: rotate(-45deg) /* поворачиваем нижнюю линию */
+        top: 0
+    
+    &__button:hover &__icon::before
+        transform: translateY(5px)
+    &__button:hover &__icon::after
+        transform: translateY(-5px)
+
