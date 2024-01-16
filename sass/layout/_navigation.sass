@@ -86,8 +86,8 @@
         &::before,
         &::after
             content: ""
-            height: 2px
-            width: 30px
+            height: .2rem
+            width: 3rem
             background: black
             display: inline-block
         &::before,
@@ -97,9 +97,9 @@
             transition: all .5s
             mix-blend-mode: normal
         &::before
-            top: 10px
+            top: 1rem
         &::after
-            top: -10px
+            top: -1rem
             
 
     &__toggle:checked ~ &__button &__icon 
@@ -118,7 +118,7 @@
         top: 0
     
     &__button:hover &__icon::before
-        transform: translateY(5px)
+        transform: translateY(0.5rem)
     &__button:hover &__icon::after
-        transform: translateY(-5px)
+        transform: translateY(-0.5rem)
 

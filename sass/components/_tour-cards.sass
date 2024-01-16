@@ -3,6 +3,10 @@
     perspective: 150rem
     -moz-perspective: 150rem /* для работы в фаирфоксе */
     position: relative
+    @include respond(tab-port)
+        height: 55rem
+    @include respond(phone)
+        height: auto
 
     &__side
         height: 50rem
@@ -15,13 +19,27 @@
         box-shadow: $box-shadow
         border-radius: .5rem
         overflow: hidden
+        @include respond(tab-port)
+            height: 55rem
+        @include respond(phone)
+            height: auto
+            position: relative
         &_front
-
+            @include respond(phone)
+                padding-bottom: 14rem
         &_back
             background: linear-gradient(120deg, $brown-light, $brown)
             transform: rotateY(180deg)
+            @include respond(phone)
+                transform: rotateY(0deg)
+                padding: 5rem 
+                padding-top: 12rem
+                clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%)
+                margin-top: -12rem
     &:hover &__side_front
         transform: rotateY(-180deg)
+        @include respond(phone)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
 
@@ -36,6 +54,8 @@
             background: $brown-light url(../img/second_card_img.jpg) center/cover no-repeat
         &_3
             background: $brown-light url(../img/third_card_img.jpg) center/cover no-repeat
+        @include respond(tab-port)
+            height: 30rem
     &__title
         font-size: 2.8rem
         letter-spacing: .2rem
@@ -45,6 +65,9 @@
         position: absolute
         top: 17rem
         right: 0
+        @include respond(tab-port)
+            font-size: 3.6rem
+            top: 24rem        
     &__span
         background: linear-gradient(90deg, $brown-light, $brown)
         padding: 1rem 2rem .3rem 2rem
@@ -53,6 +76,9 @@
             position: absolute
             right: 0
             top: 3.3rem
+            @include respond(tab-port)
+                top: 3.4rem
+            
     &__description
         ul
             list-style: none /* удаляем оформление списка */
@@ -68,7 +94,15 @@
                 display: inline-block
                 &:not(:last-child)
                     margin-bottom: 2rem
+                @include respond(tab-port)
+                    font-size: 2rem
     &__backside-box
+        @include respond(phone)
+            position: relative
+            top: 0%
+            right: 0%
+            transform: translate(0%, 0%)
+            
     &__text
         margin-bottom: 8.7rem
         color: $white
@@ -81,6 +115,9 @@
             font-weight: 500
             font-size: 6rem
             font-family: "Lato-Bolt"
+    &__btn
+        @include respond(phone)
+            display: none
 
 
 

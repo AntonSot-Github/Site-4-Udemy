@@ -1,6 +1,10 @@
 .description-part
     padding-top: 8rem
     padding-bottom: 20rem
+    @include respond(tab-land)
+        margin-bottom: 13rem
+    @include respond(tab-port)
+        margin-bottom: 4rem
 
 .section-adventure
     padding: 21rem 0
@@ -8,9 +12,13 @@
     transform: skewY(7deg) /* наклон контейнера и всех потомков */
     & > * 
         transform: skewY(-7deg) /* отмена наклона для потомков */
+    @include respond(tab-port)
+        padding: 10rem 0
 
 .section-tours
     padding-top: 21rem
+    @include respond(tab-port)
+        padding-top: 13rem
 
 .section-feedback
     padding: 8rem 0 8rem 0

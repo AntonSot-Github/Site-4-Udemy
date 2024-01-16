@@ -30,6 +30,15 @@ body
         animation-name: anim-title1
         animation-duration: 5s
         animation-iteration-count: infinite
+        @include respond(tab-land)
+            font-size: 4rem
+            margin-bottom: 2rem
+        @include respond(tab-port)
+            font-size: 3rem
+            letter-spacing: .5rem
+            
+
+
     &__part-two
         display: block
         width: 100%
@@ -40,6 +49,12 @@ body
         animation-name: anim-title2 
         animation-duration: 5s
         animation-iteration-count: infinite
+        @include respond(tab-land)
+            font-size: 3.5rem
+            margin-bottom: 2rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+            letter-spacing: .3rem
 
 .title-secondary
     font-size: $font-size-paragraph-h2
@@ -50,7 +65,10 @@ body
     background-clip: text
     color: transparent
     transition: all .4s /* Задаем плавность перехода */
-    backface-visibility: hidden /* устраняем дергание тени */
+    backface-visibility: hidden /* устраняем дергание тени */    
+    @include respond(tab-port)
+        font-size: 2rem
+        letter-spacing: .6rem
     &:hover
         transform: skewX(15deg) skewY(2deg) scale(1.2)
         text-shadow: $shadow-h2
@@ -62,6 +80,8 @@ body
     letter-spacing: .2rem
     font-weight: 700
     text-transform: uppercase
+    @include respond(tab-port)
+        font-size: 1.8rem
 
 .paragraph
     font-size: $font-size-paragraph
@@ -69,3 +89,5 @@ body
     letter-spacing: .2rem
     line-height: 140%
     display: inline-block
+    @include respond(tab-port)
+        font-size: 1.4rem

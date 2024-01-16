@@ -7,7 +7,9 @@
         margin: 0 auto
         display: block        
     &__nav-menu
-        text-align: center        
+        text-align: center
+        @include respond(tab-port)
+            line-height: 3.5rem /* задаем расстояние между строками */
         a
             color: $white
             text-decoration: none
@@ -21,7 +23,16 @@
             &:hover
                 transform: scale(1.2) translateY(-0.3rem)
                 color: $brown
-                
+            @include respond(tab-land)
+                &:not( :last-child )
+                    margin-right: 1.7rem
+            @include respond(tab-port)
+                &:not( :last-child )
+                    margin-right: 3rem
+            @include respond(phone)
+                margin-right: 0 !important
+                padding: 2rem
+
 
 
 

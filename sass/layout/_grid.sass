@@ -3,23 +3,35 @@
     margin: 0 auto
     color: black
     @include clearfix
+    @include respond(tab-land)
+        max-width: 90.1rem
+    @include respond(tab-port)
+        max-width: 60rem
+        
+
 
     //устанавливаем отступ для всех строк, кроме последней
     &:not(:last-child) 
         margin-bottom: $indent-8rem
-
+        @include respond(tab-port)
+            margin-bottom: 4rem
+            
 .col1-50
     width: calc((100% - #{$column-indent}) / 2)
 
 
 .col-33
     width: calc((100% - 2 * #{$column-indent}) / 3)
+    @include respond(tab-land)
+        width: calc((100% - 2 * #{2rem}) / 3)
 
 .col-66
     width: calc(( 2 * (100% - 2 * #{$column-indent})) / 3)
 
 .col-25
     width: calc((100% - 3 * #{$column-indent}) / 4)
+    @include respond(tab-land)
+        width: calc((100% - 3 * 1.8rem) / 4)
     
 .col-50
     width: calc( 2 * ((100% - 3 * #{$column-indent}) / 4) + #{$column-indent})
@@ -31,3 +43,10 @@
     &:not(:last-child)
         margin-right: $column-indent
     float: left
+    @include respond(tab-land)
+        &:not(:last-child)
+            margin-right: 1.8rem
+    @include respond(tab-port)
+        width: 100%
+        margin-right: 0 !important
+        margin-bottom: 4rem

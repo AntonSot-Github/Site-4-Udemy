@@ -12,6 +12,13 @@
         letter-spacing: .5rem
         transition: all .3s
         border: none
+        @include respond(tab-land)
+            padding: 1rem 3rem
+            font-size: 1.8rem
+        @include respond(tab-port)
+            padding: 2rem 5rem
+        
+
     &:hover
         transform: translateY(-.5rem) /* кнопка поднимается при наведении курсора */
         box-shadow: $box-shadow /* также появляется тень */

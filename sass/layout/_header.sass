@@ -17,3 +17,7 @@
         left: 50% /* центрируем по горизонтали */
         top: 40% /* смещаем по вертикали */
         transform: translate(-50%, -50%) /* смещаем точку центрирования блока */
+        @include respond(tab-land)
+            top: 50%
+        @include respond(tab-port)
+            top: 55%
