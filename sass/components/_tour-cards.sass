@@ -97,6 +97,10 @@
                 @include respond(tab-port)
                     font-size: 2rem
     &__backside-box
+        a
+            @include respond(big-screen)
+                padding: 1.3rem 3.5rem !important
+                font-size: 1.5rem !important
         @include respond(phone)
             position: relative
             top: 0%
